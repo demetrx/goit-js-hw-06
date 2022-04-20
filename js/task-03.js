@@ -17,5 +17,5 @@ const galleryEl = document.querySelector('.gallery');
 galleryEl.insertAdjacentHTML('afterbegin', makeImgList(images));
 
 function makeImgList(list) {
-  return list.map(({ url, alt }) => `<li><img src='${url} alt='${alt}'></li>`).join('');
+  return list.map(({ url, alt }) => `<li><img src='${url}' alt='${alt}'></li>`).join('');
 }

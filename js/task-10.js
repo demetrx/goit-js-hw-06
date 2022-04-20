@@ -17,8 +17,10 @@ function onDestroyBtnClick() {
 }
 
 function createBoxes(amount) {
+  const numOfExistingBoxes = document.querySelectorAll('#boxes div').length;
   const arr = [];
-  let size = 30;
+  const incr = 10;
+  let size = 30 + numOfExistingBoxes * incr;
 
   for (let i = 0; i < amount; i += 1) {
     const el = document.createElement('div');
@@ -27,7 +29,7 @@ function createBoxes(amount) {
     el.style.width = el.style.height = `${size}px`;
 
     arr.push(el);
-    size += 10;
+    size += incr;
   }
 
   boxesEl.append(...arr);

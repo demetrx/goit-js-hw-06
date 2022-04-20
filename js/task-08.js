@@ -10,6 +10,7 @@ function onFormSubmit(e) {
 
   if (email.value === '' || password.value === '') {
     alert('All form fields should be filled in!');
+    return;
   }
 
   const info = {
